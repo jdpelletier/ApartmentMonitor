@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% if title %}
+		<title>{{ title }} - Apartment Measurements</title>
+		{% else %}
+		<title>Apartment Measurements</title>
+		{% endif %}
+	</head>
+	<body>
+		<h1>Current measurements on {{ datadic.today }}</h1>
+		<p>Max lum, humidity, and temperature for today:</p>
+		<ul>
+			<li>{{ datadic.maxlum }}</li>
+			<li>{{ datadic.maxhum }}</li>
+			<li>{{ datadic.maxtemp }}</li>
+		</ul>
+		<p>Temps at {{ datadic.now }}</p>
+		<ul>
+			<li>Lum: {{ datadic.lum }}</li>
+			<li>Humidity: {{ datadic.hum }}</li>
+			<li>Temperature: {{ datadic.temp }}</li>
+		</ul>
+		<img src="/static/images/Light.jpeg" ALT="Light Plot">
+		<img src="/static/images/Hum.jpeg" ALT="Hum Plot">
+		<img src="/static/images/Temps.jpeg" ALT="Temp Plot">
+	</body>
+</html>
