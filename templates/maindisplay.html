@@ -21,8 +21,8 @@
 			<li>Humidity: {{ datadic.hum }}</li>
 			<li>Temperature: {{ datadic.temp }}</li>
 		</ul>
-		<img src="/static/images/Light.jpeg" ALT="Light Plot">
-		<img src="/static/images/Hum.jpeg" ALT="Hum Plot">
-		<img src="/static/images/Temps.jpeg" ALT="Temp Plot">
+		{% for pic in piclist %}
+		<img src={{pic}} ALT="">
+		{% endfor %}
 	</body>
 </html>
