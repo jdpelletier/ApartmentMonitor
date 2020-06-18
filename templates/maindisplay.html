@@ -8,6 +8,7 @@
 		{% endif %}
 	</head>
 	<body>
+		<div><a href="/fish">Fish</a></div> <a href="/bokehtest">Bokehtest</a></div>
 		<h1>Current measurements on {{ datadic.today }}</h1>
 		<p>Max lum, humidity, and temperature for today:</p>
 		<ul>
@@ -15,7 +16,7 @@
 			<li>{{ datadic.maxhum }}</li>
 			<li>{{ datadic.maxtemp }}</li>
 		</ul>
-		<p>Temps at {{ datadic.now }}</p>
+		<p>Measurements at {{ datadic.now }}</p>
 		<ul>
 			<li>Lum: {{ datadic.lum }}</li>
 			<li>Humidity: {{ datadic.hum }}</li>

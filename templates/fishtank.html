@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% if title %}
+		<title>{{ title }} - Fish Tank Measurements</title>
+		{% else %}
+		<title>Fish Tank Measurements</title>
+		{% endif %}
+	</head>
+	<body>
+		<div><a href="/">Apartment</a></div> <a href="/Bokehtest">Bokehtest</a></div>
+		<h1>Current measurements on {{ datadic.today }}</h1>
+		<p>Max pH for today:</p>
+		<ul>
+			<li>{{ datadic.maxph }}</li>
+		</ul>
+		<p>Measurements at {{ datadic.now }}</p>
+		<ul>
+			<li>pH: {{ datadic.ph }}</li>
+		</ul>
+		{% for pic in piclist %}
+		<img src={{pic}} ALT="">
+		{% endfor %}
+	</body>
+</html>

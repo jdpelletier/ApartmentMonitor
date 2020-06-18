@@ -1,4 +1,7 @@
 #include "DHT.h"
+#include "ph_grav.h"                           
+
+Gravity_pH pH = Gravity_pH(A1);                        
 
 #define DHTPIN 2
 
@@ -58,7 +61,9 @@ void loop() {
   Serial.print(h);
 //  Serial.print(F("%  Temperature: "));
   Serial.print(" ");
-  Serial.println(f);
+  Serial.print(f);
+  Serial.print(" ");
+  Serial.println(pH.read_ph());
   digitalWrite(13, HIGH);       
   delay(800);
   digitalWrite(13, LOW);

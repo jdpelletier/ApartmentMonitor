@@ -43,13 +43,15 @@ def HTMLDic(data):
     daystring = currentDay.isoformat()
     data = data.split()
     datadic = {'today': daystring,
-                'maxlum': data[3],
-                'maxhum': data[4],
-                'maxtemp': data[5],
+                'maxlum': data[4],
+                'maxhum': data[5],
+                'maxtemp': data[6],
+                'maxph': data[7],
                 'now': NowString(),
                 'lum': data[0],
                 'hum': data[1],
-                'temp': data[2]}
+                'temp': data[2],
+                'ph':data[3]}
     with open('datadic.txt', 'w') as f:
         for key in datadic:
             print(key + ' ' + datadic[key], file=f)
